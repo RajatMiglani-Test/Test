@@ -1,0 +1,248 @@
+Microsoft Windows [Version 10.0.22631.4602]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Nitin.2.Bansal>cd C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master
+
+C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master>set BROWSERSTACK_USERNAME="himanshusharma_TIyKFs"
+
+C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master>set BROWSERSTACK_ACCESS_KEY="ATzyviA28QFdK9TpFZzv"
+
+C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master>mvn test -P sample-test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.browserstack:testng-browserstack:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.version' for com.browserstack:browserstack-java-sdk:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 38, column 22
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 70, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------< com.browserstack:testng-browserstack >----------------
+[INFO] Building testng-browserstack 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.7.0:properties (getClasspathFilenames) @ testng-browserstack ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ testng-browserstack ---
+[INFO] skip non existing resourceDirectory C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ testng-browserstack ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ testng-browserstack ---
+[INFO] skip non existing resourceDirectory C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ testng-browserstack ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- surefire:2.19.1:test (default-test) @ testng-browserstack ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+[ERROR] Access to BrowserStack denied due to incorrect credentials.
+[INFO]
+[2025-01-10T16:55:39.952917900Z][ TESTHUB ] EXCEPTION IN BUILD START EVENT : com.browserstack.testOps.RequestException: Non 200 response
+        at com.browserstack.testOps.RequestException.non200(Unknown Source)
+        at com.browserstack.testOps.RequestUtils.requestToTestOps(Unknown Source)
+        at com.browserstack.testOps.RequestUtils.requestToTestOpsJson(Unknown Source)
+        at com.browserstack.testOps.RequestUtils.launch(Unknown Source)
+        at com.browserstack.testOps.Listener.onStart(Unknown Source)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at com.browserstack.utils.ConditionalInvocationHandler.invoke(Unknown Source)
+        at com.sun.proxy.$Proxy6.onStart(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.b(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.a(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.premain(Unknown Source)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:513)
+        at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:525)
+Running TestSuite
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 2, Time elapsed: 5.13 sec <<< FAILURE! - in TestSuite
+setUp(com.browserstack.BStackDemoTest)  Time elapsed: 3.841 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Unable to parse remote response: Authorization required
+Caused by: org.openqa.selenium.json.JsonException: Unable to parse: Authorization required
+Caused by: org.openqa.selenium.json.JsonException:
+Unable to determine type from: A. Last 1 characters read: A
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'LP-TZD-0X127148', ip: '192.168.29.167', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: driver.version: ChromeDriver
+
+tearDown(com.browserstack.BStackDemoTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+setUp(com.browserstack.BStackDemoTestA)  Time elapsed: 0.63 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Unable to parse remote response: Authorization required
+Caused by: org.openqa.selenium.json.JsonException: Unable to parse: Authorization required
+Caused by: org.openqa.selenium.json.JsonException:
+Unable to determine type from: A. Last 1 characters read: A
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'LP-TZD-0X127148', ip: '192.168.29.167', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: driver.version: ChromeDriver
+
+tearDown(com.browserstack.BStackDemoTestA)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+[WARN] Unable to show build URL, as build capability is not used
+
+Results :
+
+Failed tests:
+  BStackDemoTest>SeleniumTest.setUp:17 » SessionNotCreated Could not start a new...
+  BStackDemoTest>SeleniumTest.tearDown:22 » NullPointer
+  BStackDemoTestA>SeleniumTest.setUp:17 » SessionNotCreated Could not start a ne...
+  BStackDemoTestA>SeleniumTest.tearDown:22 » NullPointer
+
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 2
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.139 s
+[INFO] Finished at: 2025-01-10T22:25:50+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project testng-browserstack: There are test failures.
+[ERROR]
+[ERROR] Please refer to C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master>
+
+C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master>mvn test -P sample-test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.browserstack:testng-browserstack:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.version' for com.browserstack:browserstack-java-sdk:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 38, column 22
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 70, column 21
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO] 
+[INFO] ----------------< com.browserstack:testng-browserstack >----------------
+[INFO] Building testng-browserstack 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.7.0:properties (getClasspathFilenames) @ testng-browserstack ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ testng-browserstack ---
+[INFO] skip non existing resourceDirectory C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ testng-browserstack ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ testng-browserstack ---
+[INFO] skip non existing resourceDirectory C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ testng-browserstack ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- surefire:2.19.1:test (default-test) @ testng-browserstack ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+[ERROR] Access to BrowserStack denied due to incorrect credentials.
+[INFO]
+[2025-01-10T17:02:27.055071400Z][ TESTHUB ] EXCEPTION IN BUILD START EVENT : com.browserstack.testOps.RequestException: Non 200 response
+        at com.browserstack.testOps.RequestException.non200(Unknown Source)
+        at com.browserstack.testOps.RequestUtils.requestToTestOps(Unknown Source)
+        at com.browserstack.testOps.RequestUtils.requestToTestOpsJson(Unknown Source)
+        at com.browserstack.testOps.RequestUtils.launch(Unknown Source)
+        at com.browserstack.testOps.Listener.onStart(Unknown Source)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at com.browserstack.utils.ConditionalInvocationHandler.invoke(Unknown Source)
+        at com.sun.proxy.$Proxy10.onStart(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.b(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.a(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent(Unknown Source)
+        at com.browserstack.BrowserStackJavaAgent.premain(Unknown Source)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:513)
+        at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:525)
+Running TestSuite
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 2, Time elapsed: 6.443 sec <<< FAILURE! - in TestSuite
+setUp(com.browserstack.BStackDemoTest)  Time elapsed: 4.397 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Unable to parse remote response: Authorization required
+Caused by: org.openqa.selenium.json.JsonException: Unable to parse: Authorization required
+Caused by: org.openqa.selenium.json.JsonException:
+Unable to determine type from: A. Last 1 characters read: A
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'LP-TZD-0X127148', ip: '192.168.29.167', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: driver.version: ChromeDriver
+
+tearDown(com.browserstack.BStackDemoTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+setUp(com.browserstack.BStackDemoTestA)  Time elapsed: 0.89 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Unable to parse remote response: Authorization required
+Caused by: org.openqa.selenium.json.JsonException: Unable to parse: Authorization required
+Caused by: org.openqa.selenium.json.JsonException:
+Unable to determine type from: A. Last 1 characters read: A
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'LP-TZD-0X127148', ip: '192.168.29.167', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: driver.version: ChromeDriver
+
+tearDown(com.browserstack.BStackDemoTestA)  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+[WARN] Unable to show build URL, as build capability is not used
+
+Results :
+
+Failed tests:
+  BStackDemoTest>SeleniumTest.setUp:17 » SessionNotCreated Could not start a new...
+  BStackDemoTest>SeleniumTest.tearDown:22 » NullPointer
+
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 2
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.985 s
+[INFO] Finished at: 2025-01-10T22:32:40+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project testng-browserstack: There are test failures.
+[ERROR]                                                                                                                                            test failures.
+[ERROR] Please refer to C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master\target\surefire-reports for the individual test results.                                                                                                                        e individual test results.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+C:\Users\Nitin.2.Bansal\Downloads\testng-browserstack-master (1)\testng-browserstack-master>  
